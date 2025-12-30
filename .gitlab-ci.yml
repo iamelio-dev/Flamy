@@ -1,0 +1,14 @@
+pages:
+  stage: deploy
+  script:
+    # Create the public folder
+    - mkdir public
+    # Copy only the files/folders to serve
+    - cp index.html public/
+    - cp feedback_form.html public/
+    - cp -r Assets public/
+  artifacts:
+    paths:
+      - public
+  only:
+    - main
