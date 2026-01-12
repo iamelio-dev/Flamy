@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Flamy – Join the Waitlist</title>
+  <title>Flamy – A companion to keep spoken recipes alive</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./Assets/Flamy_favicon.png">
   <link rel="apple-touch-icon" sizes="180x180" href="./Assets/Flamy_favicon.png">
 
   <!-- Open Graph / Facebook -->
-  <meta property="og:title" content="Flamy – Join the Waitlist" />
+  <meta property="og:title" content="Flamy – A companion to keep spoken recipes alive" />
   <meta property="og:description" content="Record recipes as they're explained. Flamy turns them into clear, step-by-step instructions you can cook anytime." />
   <meta property="og:image" content="https://flamyrecipes.com/Assets/Opengraph_image.jpg" />
   <meta property="og:url" content="https://flamyrecipes.com" />
@@ -18,7 +18,7 @@
 
   <!-- Twitter / LinkedIn -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Flamy – Join the Waitlist" />
+  <meta name="twitter:title" content="Flamy – A companion to keep spoken recipes alive" />
   <meta name="twitter:description" content="Record recipes as they're explained. Flamy turns them into clear, step-by-step instructions you can cook anytime." />
   <meta name="twitter:image" content="https://flamyrecipes.com/Assets/Opengraph_image.jpg" />
 
@@ -35,11 +35,6 @@
       --bg: #fafafa;
       --text: #111;
       --muted: #555;
-      --button-bg: #E26310;
-      --button-bg-hover: #C94F08;
-      --button-text: #fff;
-      --input-border: #ccc;
-      --input-hover: #f0f0f0;
     }
 
     @media (prefers-color-scheme: dark) {
@@ -47,11 +42,6 @@
         --bg: #111111;
         --text: #E5E5E5;
         --muted: #A5A5A5;
-        --button-bg: #F28742;
-        --button-bg-hover: #E06F2D;
-        --button-text: #1C1C1C;
-        --input-border: #A1A2A3;
-        --input-hover: #1c1c1c;
       }
     }
 
@@ -63,7 +53,7 @@
       min-height: 100vh;
       padding: 20px;
       display: flex;
-      justify-content: center; 
+      justify-content: center;
       align-items: flex-start;
     }
 
@@ -124,57 +114,14 @@
       max-width: 500px;
     }
 
-    form {
+    .app-store-container {
       display: flex;
-      max-width: 470px;
-      width: 100%;
-      margin: 0 auto 0 0;
+      align-items: center;
     }
 
-    .newsletter-form-container {
-    height: 60px;
-    justify-content: center;
-    }
-
-    input[type="email"] {
-      flex: 1;
-      padding: 14px 16px;
-      border: 1px solid var(--input-border);
-      border-right: none;
-      border-radius: 12px 0 0 12px;
-      font-size: 15px;
-      background: var(--bg);
-      color: var(--text);
-      transition: background 0.2s ease;
-    }
-
-    input[type="email"]:hover,
-    input[type="email"]:focus {
-      background: var(--input-hover);
-      outline: none;
-    }
-
-    button {
-      background: var(--button-bg);
-      color: var(--button-text);
-      font-weight: 500;
-      border: none;
-      border-radius: 0 12px 12px 0;
-      padding: 14px 20px;
-      font-size: 15px;
-      cursor: pointer;
-      white-space: nowrap;
-      transition: background 0.2s ease;
-
-      /* FIX: prevent width jump between labels */
-      min-width: 80px; /* enough for "Please wait..." */
-      text-align: center;
-    }
-
-    button:hover,
-    button:focus {
-      background: var(--button-bg-hover);
-      outline: none;
+    .app-store-container a img {
+      width: 180px;
+      height: auto;
     }
 
     .hero {
@@ -188,39 +135,6 @@
       max-width: 450px;
       max-height: 700px;
       border-radius: 24px;
-    }
-
-    .newsletter-success,
-    .newsletter-error {
-      display: none;
-    }
-
-    .newsletter-success-message {
-      color: var(--button-bg);
-      font-size: 15px;
-      margin: 0 auto 0 0;
-      /* padding: 14px 16px; */
-      text-align: left;
-      height: 20px; /* Match form input inner height */
-      display: flex;
-      align-items: center;
-      max-width: 400px;
-      width: 100%;
-      box-sizing: border-box;
-      border: 1px solid transparent; /* Match form border to maintain exact same dimensions */
-      border-radius: 12px; /* Match form border radius */
-    }
-
-    .newsletter-error-message {
-      color: #e30000;
-    }
-
-    .newsletter-back-button {
-      margin-top: 1em;
-      background: var(--muted);
-      color: var(--bg);
-      border-radius: 8px;
-      padding: 8px 16px;
     }
 
     .follow-link {
@@ -256,18 +170,14 @@
       }
       .description {
         align-items: center;
-        text-align: center; 
-        max-width: 90%; 
+        text-align: center;
+        max-width: 90%;
       }
       .subtext {
         max-width: 400px;
       }
-      form {
-        margin: 0 auto;
-      }
-      .newsletter-success-message {
-        text-align: center;
-        margin: 0 auto;
+      .app-store-container {
+        justify-content: center;
       }
       .follow-link {
         margin: 20px auto 0;
@@ -282,23 +192,15 @@
         font-size: 24px;
       }
       .description {
-        max-width: 100%; 
+        max-width: 100%;
       }
       .hero img {
         max-width: 100%;
       }
-      form {
-        flex-direction: column;
+      .app-store-container a img {
+        width: 160px;
+        height: auto;
       }
-      input[type="email"], button {
-        border-radius: 12px;
-        border-right: 1px solid var(--input-border);
-        margin: 5px 0;
-        min-width: auto;
-      }
-      .newsletter-form-container {
-    height: 120px;
-    }
     }
 
     @media (min-width: 1000px) {
@@ -323,26 +225,15 @@
       <h1>A companion to keep spoken recipes alive</h1>
       <p class="subtext">Record recipes as they're explained. Flamy turns them into clear, step-by-step instructions you can cook anytime.</p>
 
-      <!-- Loops Form -->
-      <div class="newsletter-form-container">
-        <form
-          class="newsletter-form"
-          action="https://app.loops.so/api/newsletter-form/cmjsg0wdb1grx0i2aqnq9bg63"
-          method="POST">
-          <input type="email" name="email" class="newsletter-form-input" placeholder="Enter your email" required>
-          <button type="submit" class="newsletter-form-button">Join waitlist</button>
-          <button type="button" class="newsletter-loading-button" style="display:none;">Please wait...</button>
-        </form>
-
-        <div class="newsletter-success" style="padding-top: 8px;">
-          <p class="newsletter-success-message">Thanks! We'll be in touch!</p>
-        </div>
-
-        <div class="newsletter-error">
-          <p class="newsletter-error-message">Oops! Something went wrong, please try again</p>
-        </div>
-
-        <button class="newsletter-back-button" type="button" style="display:none;">&larr; Back</button>
+      <!-- App Store Button -->
+      <div class="app-store-container">
+        <a href="REPLACE_WITH_APP_STORE_LINK" style="display: inline-block;">
+          <picture>
+            <source srcset="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/white/en-us" media="(prefers-color-scheme: dark)">
+            <source srcset="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" media="(prefers-color-scheme: light)">
+            <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us" alt="Download on the App Store" style="width: 150px; height: 82px; vertical-align: middle; object-fit: contain;" />
+          </picture>
+        </a>
       </div>
 
       <a href="https://x.com/ElioRaineri" target="_blank" rel="noopener noreferrer" class="follow-link">
@@ -363,101 +254,5 @@
     </div>
   </div>
 
-  <script>
-    function submitHandler(event) {
-      event.preventDefault();
-      var container = event.target.parentNode;
-      var form = container.querySelector(".newsletter-form");
-      var formInput = container.querySelector(".newsletter-form-input");
-      var success = container.querySelector(".newsletter-success");
-      var errorContainer = container.querySelector(".newsletter-error");
-      var errorMessage = container.querySelector(".newsletter-error-message");
-      var backButton = container.querySelector(".newsletter-back-button");
-      var submitButton = container.querySelector(".newsletter-form-button");
-      var loadingButton = container.querySelector(".newsletter-loading-button");
-
-      const rateLimit = () => {
-        errorContainer.style.display = "block";
-        errorMessage.innerText = "Too many signups, please try again in a little while";
-        form.style.display = "none";
-        backButton.style.display = "block";
-      }
-
-      var time = new Date();
-      var timestamp = time.valueOf();
-      var previousTimestamp = localStorage.getItem("loops-form-timestamp");
-
-      if (previousTimestamp && Number(previousTimestamp) + 60000 > timestamp) {
-        rateLimit();
-        return;
-      }
-      localStorage.setItem("loops-form-timestamp", timestamp);
-
-      submitButton.style.display = "none";
-      loadingButton.style.display = "inline-block";
-
-      var formBody = "userGroup=Waitlist&mailingLists=&email=" + encodeURIComponent(formInput.value);
-
-      fetch(event.target.action, {
-        method: "POST",
-        body: formBody,
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      })
-        .then((res) => [res.ok, res.json(), res])
-        .then(([ok, dataPromise, res]) => {
-          if (ok) {
-            // Success: hide form and show success message without back button
-            form.style.display = "none";
-            success.style.display = "block";
-            form.reset();
-          } else {
-            dataPromise.then(data => {
-              errorContainer.style.display = "block";
-              errorMessage.innerText = data.message || res.statusText;
-              form.style.display = "none";
-              backButton.style.display = "block";
-            });
-          }
-        })
-        .catch(error => {
-          if (error.message === "Failed to fetch") {
-            rateLimit();
-            return;
-          }
-          errorContainer.style.display = "block";
-          if (error.message) errorMessage.innerText = error.message;
-          localStorage.setItem("loops-form-timestamp", '');
-          form.style.display = "none";
-          backButton.style.display = "block";
-        })
-        .finally(() => {
-          loadingButton.style.display = "none";
-        });
-    }
-
-    function resetFormHandler(event) {
-      var container = event.target.parentNode;
-      var form = container.querySelector(".newsletter-form");
-      var success = container.querySelector(".newsletter-success");
-      var errorContainer = container.querySelector(".newsletter-error");
-      var errorMessage = container.querySelector(".newsletter-error-message");
-      var backButton = container.querySelector(".newsletter-back-button");
-
-      success.style.display = "none";
-      errorContainer.style.display = "none";
-      errorMessage.innerText = "Oops! Something went wrong, please try again";
-      backButton.style.display = "none";
-      form.style.display = "flex";
-    }
-
-    var formContainers = document.getElementsByClassName("newsletter-form-container");
-    for (var i = 0; i < formContainers.length; i++) {
-      var formContainer = formContainers[i]
-      if (formContainer.classList.contains('newsletter-handlers-added')) continue;
-      formContainer.querySelector(".newsletter-form").addEventListener("submit", submitHandler);
-      formContainer.querySelector(".newsletter-back-button").addEventListener("click", resetFormHandler);
-      formContainer.classList.add("newsletter-handlers-added");
-    }
-  </script>
 </body>
 </html>
